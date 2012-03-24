@@ -6,9 +6,10 @@ gem 'rails', '3.2.2'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'haml-rails'
 gem 'heroku'
 gem 'compass-rails'
-gem 'compass_twitter_bootstrap'
+gem 'compass_twitter_bootstrap', :git => 'https://github.com/vwall/compass-twitter-bootstrap.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
