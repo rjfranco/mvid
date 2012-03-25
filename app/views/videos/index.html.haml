@@ -1,14 +1,9 @@
-.row
-  %h1 Music Video Suggestions
-  %h2 Current requests added by you, the attendees!
+%ul.video-list
+  - @videos.each do |video|
+    %li
+      %h3= "#{video.artist} by #{video.song}"
+      %p= "Suggested by #{video.suggested_by}"
 
-.row.content
-  %ul.video-list
-    - @videos.each do |video|
-      %li
-        %h3= "#{video.artist} by #{video.song}"
-        %p= "Suggested by #{video.suggested_by}"
-
-.row.add
-  %h3 Want to add another? Go ahead!
+.add-more
   = link_to 'Add Video', new_video_path, :class => 'new-video btn btn-primary'
+  %h4 Please add to this list!

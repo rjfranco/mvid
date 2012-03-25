@@ -3,9 +3,26 @@
 @import 'compass_twitter_bootstrap';
 
 .content {
-  margin: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 ul.video-list {
-  margin: 0;
+  margin: 0 2em;
+}
+
+.add-more {
+  margin: 2em 0;
+  .btn {
+    float: left;
+    margin: 0 1em 0 .5em;
+  }
+  h4 {
+    line-height: 1.8;
+  }
+}
+
+.actions {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
