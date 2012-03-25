@@ -1,14 +1,14 @@
-.row-fluid
+.row
   %h1 Music Video Suggestions
   %h2 Current requests added by you, the attendees!
 
-.row-fluid.content
+.row.content
   %ul.video-list
     - @videos.each do |video|
       %li
         %h3= "#{video.artist} by #{video.song}"
         %p= "Suggested by #{video.suggested_by}"
 
-.row-fluid.add
+.row.add
   %h3 Want to add another? Go ahead!
-  = link_to 'New Video', new_video_path, :class => 'new-video button'
+  = link_to 'Add Video', new_video_path, :class => 'new-video btn btn-primary'
