@@ -1,7 +1,7 @@
 %ul.video-list
   - @videos.each do |video|
     %li
-      %h3= "#{video.artist} by #{video.song}"
+      %h3= "#{video.song} by #{video.artist}"
       %p= "Suggested by #{video.suggested_by}"
 
 .add-more
