@@ -1,20 +1,17 @@
-<p id="notice"><%= notice %></p>
+- unless notice.blank?
+  %p#notice= notice
+  
+%ul
+  %li
+    %h5 Artist:
+    %p= @video.artist
+  %li
+    %h5 Song:
+    %p= @video.song
+  %li
+    %h5 Suggested by:
+    %p= @video.suggested_by
 
-<p>
-  <b>Artist:</b>
-  <%= @video.artist %>
-</p>
-
-<p>
-  <b>Song:</b>
-  <%= @video.song %>
-</p>
-
-<p>
-  <b>Suggested by:</b>
-  <%= @video.suggested_by %>
-</p>
-
-
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+%ul.actions
+  %li= link_to 'Edit', edit_video_path(@video), :class => 'btn'
+  %li= link_to 'Back', videos_path, :class => 'btn'
