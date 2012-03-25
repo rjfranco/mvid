@@ -44,7 +44,7 @@ class VideosController < ApplicationController
 
     respond_to do |format|
       if @video.save
-        format.html { redirect_to @root, notice: 'Video was successfully added.' }
+        format.html { redirect_to root_path, notice: 'Video was successfully added.' }
         format.json { render json: @video, status: :created, location: @video }
       else
         format.html { render action: "new" }
